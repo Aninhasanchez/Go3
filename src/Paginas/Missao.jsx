@@ -10,7 +10,12 @@ export function Missao() {
   const concluirMissao = (id) => {
     const inventario = JSON.parse(localStorage.getItem("Iventário")) || [];
     const m = missoes.find((ms) => m.id === id);
-    
+
+    const figurinha = {
+      id: m.id,
+      nome: m.titulo || 'Figurinha'
+    }
+
   };
 
   return (

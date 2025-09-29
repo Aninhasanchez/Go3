@@ -1,4 +1,9 @@
 export function MissaoCard({ missao, onIniciarMissao,concluida  }) {
+    const inventario = JSON.parse(localStorage.getItem("Iventário")) || [];
+    const concluidaLocal = inventario.some((f) => f.id === missao.id);
+
+
+
   return (
     <article className='missao-card'>
       <h3 id={missao.id}>{missao.titulo}</h3>
